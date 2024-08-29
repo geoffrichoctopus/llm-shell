@@ -11,6 +11,12 @@ Usage: main.py [-h] [--api_key API_KEY] [--endpoint_url ENDPOINT_URL] [--llm_typ
 * Python 3
 * rich pip package - `pip install rich`
 
+## Installation
+
+1. Clone this repo.
+2. Install the rich pip package.
+3. Set up an alias to run this to make it easy to run. Add to your bashrc or zshrc file, ie `alias llm-shell='~/Repos/llm-shell/main.py'`
+
 ## How to use
 
 The first time you run this tool, supply an `api_key` and an `endpoint_url` which can be found from your Azure resource. 
