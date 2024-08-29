@@ -17,7 +17,7 @@ def allowSelfSignedHttps(allowed):
 allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
 
 system_roles = {
-    "shell-bash":"You are an assistant that helps people write shell commands for linux or mac.",
+    "shell":"You are an assistant that helps people write shell commands for linux or mac.",
     "kubectl":"You are an assistant that helps people write kubectl commands for interacting with Kubernetes.",
     "powershell":"You are an assistant that helps people write powershell commands."
 }
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         raise Exception("An LLM type should be provided to invoke the endpoint. This can be passed in as a command line argument then saved in the config.json file.")
 
     user_query = args.query
-    system_role_type = "shell-bash"
+    system_role_type = "shell"
     if args.query_type:
         system_role_type = args.query_type
     if system_roles.get(system_role_type) is None:

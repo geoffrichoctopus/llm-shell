@@ -19,17 +19,24 @@ Usage: main.py [-h] [--api_key API_KEY] [--endpoint_url ENDPOINT_URL] [--llm_typ
 
 ## How to use
 
-The first time you run this tool, supply an `api_key` and an `endpoint_url` which can be found from your Azure resource. 
+The first time you run this tool, supply an `api_key`, an `endpoint_url` and the `llm_type`. The `api_key`, an `endpoint_url` can be found from your Azure resource. If you are connecting to a ChatGPT API, use "GPT" as the `llm_type`. If you are connecting to a llama llm (ie llama 3), use "llama" as the `llm_type`.
 
-The endpoint_url and api_key only needs to be supplied once as these details will be saved into a config.json in ~/.llm-shell and re-used.
+The endpoint_url, api_key and llm_type only needs to be supplied once as these details will be saved into a config.json in ~/.llm-shell and re-used.
 
 If you ever need to change these details, re-supply them via the command line and the config.json will be updated.
 
 ## LLM Types
 
-This defaults to "shell-bash", the following options are available, along with the system prompt used for your query:
+This script supports connecting to both ChatGPT and LLama3 endpoints. The following options are available:
 
-* shell-bash: You are an assistant that helps people write shell commands for linux or mac.
+* GPT
+* llama
+
+## Query Types
+
+This defaults to "shell", the following options are available, along with the system prompt used for your query:
+
+* shell: You are an assistant that helps people write shell commands for linux or mac.
 * kubectl: You are an assistant that helps people write kubectl commands for interacting with Kubernetes.
 * powershell : You are an assistant that helps people write powershell commands.
 
@@ -37,7 +44,7 @@ This can be set using the llm_type command line option.
 
 ## Examples
 
-First use: `./main.py --api_key xxxxxxx --endpoint_url https://some.url "How to I unzip a .tar.gz file?"`
+First use: `./main.py --api_key xxxxxxx --endpoint_url https://some.url --llm_type GPT "How to I unzip a .tar.gz file?"`
 
 Subsequent uses: `./main.py "How to I unzip a .tar.gz file?"`
 
