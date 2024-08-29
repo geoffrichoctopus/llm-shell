@@ -15,11 +15,11 @@ Usage: main.py [-h] [--api_key API_KEY] [--endpoint_url ENDPOINT_URL] [--llm_typ
 
 1. Clone this repo.
 2. Install the rich pip package.
-3. Set up an alias to run this to make it easy to run. Add to your bashrc or zshrc file, ie `alias llm-shell='~/Repos/llm-shell/main.py'`
+3. Set up an alias to run this to make it easy to run. Add an alias to your bashrc or zshrc file, ie `alias llm-shell='~/Repos/llm-shell/main.py'`
 
 ## How to use
 
-The first time you run this tool, supply an `api_key`, an `endpoint_url` and the `llm_type`. The `api_key`, an `endpoint_url` can be found from your Azure resource. If you are connecting to a ChatGPT API, use "GPT" as the `llm_type`. If you are connecting to a llama llm (ie llama 3), use "llama" as the `llm_type`.
+The first time you run this tool, supply an `api_key`, an `endpoint_url` and the `llm_type`. The `api_key` and `endpoint_url` can be found on your Azure OpenAI resource. If you are connecting to a ChatGPT API, use "GPT" as the `llm_type`. If you are connecting to a llama llm (ie llama 3), use "llama" as the `llm_type`.
 
 The endpoint_url, api_key and llm_type only needs to be supplied once as these details will be saved into a config.json in ~/.llm-shell and re-used.
 
@@ -56,4 +56,4 @@ The output is piped back into the termainal and formatted as per the markdown re
 
 ## Notes
 
-Ensure the query is surrouned by quotes.
+Ensure the query is surrounded by quotes.
