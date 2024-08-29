@@ -154,7 +154,7 @@ if __name__ == "__main__":
     if args.query_type:
         system_role_type = args.query_type
     if system_roles.get(system_role_type) is None:
-        raise Exception("The query type should be set to shell-bash or kubectl.")
+        raise Exception("The query type should be set properly.")
 
     if config["llm_type"] == "llama":
         headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ config["api_key"])}
