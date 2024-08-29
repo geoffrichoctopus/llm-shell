@@ -17,7 +17,7 @@ def allowSelfSignedHttps(allowed):
 allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
 
 system_roles = {
-    "shell-bash":"You are an assistant that helps people write shell commands for linux for bash.",
+    "shell-bash":"You are an assistant that helps people write shell commands for linux or mac.",
     "kubectl":"You are an assistant that helps people write kubectl commands for interacting with Kubernetes.",
     "powershell":"You are an assistant that helps people write powershell commands."
 }

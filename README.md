@@ -29,7 +29,7 @@ If you ever need to change these details, re-supply them via the command line an
 
 This defaults to "shell-bash", the following options are available, along with the system prompt used for your query:
 
-* shell-bash: You are an assistant that helps people write shell commands for linux for bash.
+* shell-bash: You are an assistant that helps people write shell commands for linux or mac.
 * kubectl: You are an assistant that helps people write kubectl commands for interacting with Kubernetes.
 * powershell : You are an assistant that helps people write powershell commands.
 
